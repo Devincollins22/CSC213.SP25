@@ -1,6 +1,6 @@
 package edu.canisius.csc213.lab3;
 
-import edu.canisius.csc213.util.*;
+import edu.canisius.csc213.util.SysDebugger;
 
 /**
  * Demonstrates how to dump running processes if an exception occurs.
@@ -24,7 +24,8 @@ public class DebugExample {
             SysDebugger.logRunningProcesses();
 
 	    // 3)Log the time of the crash
-	    
+	    SysDebugger.logCurrentDateTime();
+	    System.out.println("Exception occured: " + e.getMessage());
         }
 
         System.out.println("Exiting program.");
@@ -40,6 +41,9 @@ public class DebugExample {
         }
         // Otherwise, do something "normal"
         System.out.println("dangerousOperation succeeded. No crash this time.");
+
+
+
     }
 }
 
